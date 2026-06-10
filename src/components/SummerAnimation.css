@@ -1,0 +1,79 @@
+.tv-board::after {
+  content: none;
+}
+
+.tv-board.season-summer::before {
+  inset: -36%;
+  background:
+    radial-gradient(
+      circle at 18% 22%,
+      color-mix(in srgb, #ffd286 24%, transparent),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 82% 70%,
+      color-mix(in srgb, #ffc07a 18%, transparent),
+      transparent 36%
+    ),
+    repeating-linear-gradient(
+      108deg,
+      color-mix(in srgb, #ffd286 6%, transparent) 0 14px,
+      transparent 14px 32px
+    );
+  filter: blur(1.4px) saturate(1.05);
+  opacity: 0.72;
+  animation:
+    ambient-shift 16s ease-in-out infinite alternate,
+    summer-heat-shimmer 6.2s ease-in-out infinite alternate;
+}
+
+.tv-board.season-summer::after {
+  content: "";
+  position: absolute;
+  inset: -30% -45% -30% -45%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: screen;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 36%,
+    color-mix(in srgb, #ffe9b8 82%, transparent) 50%,
+    transparent 63%,
+    transparent 100%
+  );
+  animation: summer-sunbeam-sweep 14s ease-in-out infinite;
+}
+
+@keyframes summer-heat-shimmer {
+  0% {
+    transform: translate3d(-1.2%, 0, 0) scale(1.01) skewX(0deg);
+    opacity: 0.58;
+  }
+
+  100% {
+    transform: translate3d(1.5%, -1.1%, 0) scale(1.04) skewX(-1.5deg);
+    opacity: 0.82;
+  }
+}
+
+@keyframes summer-sunbeam-sweep {
+  0% {
+    transform: translate3d(-22%, 10%, 0) rotate(-2deg);
+    opacity: 0;
+  }
+
+  22% {
+    opacity: 0.36;
+  }
+
+  58% {
+    opacity: 0.28;
+  }
+
+  100% {
+    transform: translate3d(24%, -10%, 0) rotate(2deg);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,122 @@
+.tv-board > .spring-petals {
+  position: absolute;
+  inset: -8% 0 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.spring-petals .petal {
+  --fall-duration: 14s;
+  position: absolute;
+  top: -12%;
+  left: 0;
+  width: clamp(10px, 0.9vw, 16px);
+  aspect-ratio: 1 / 1.5;
+  border-radius: 64% 36% 60% 40% / 72% 28% 66% 34%;
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, #ffd7e3 88%, transparent),
+    color-mix(in srgb, #f3a9be 82%, transparent) 72%
+  );
+  box-shadow: 0 0 0.6rem color-mix(in srgb, #f3a9be 26%, transparent);
+  opacity: 0.8;
+  animation:
+    petal-fall var(--fall-duration) linear infinite,
+    petal-sway calc(var(--fall-duration) * 0.43) ease-in-out infinite alternate;
+}
+
+.spring-petals .petal::after {
+  content: "";
+  position: absolute;
+  inset: 26% 36% 30% 36%;
+  border-radius: 999px;
+  background: color-mix(in srgb, #ffe7ef 70%, transparent);
+  opacity: 0.55;
+}
+
+.spring-petals .petal:nth-child(1) {
+  left: 4%;
+  --fall-duration: 13s;
+  animation-delay: -5s;
+}
+
+.spring-petals .petal:nth-child(2) {
+  left: 13%;
+  --fall-duration: 15s;
+  animation-delay: -11s;
+}
+
+.spring-petals .petal:nth-child(3) {
+  left: 24%;
+  --fall-duration: 12.5s;
+  animation-delay: -2.5s;
+}
+
+.spring-petals .petal:nth-child(4) {
+  left: 34%;
+  --fall-duration: 16s;
+  animation-delay: -8s;
+}
+
+.spring-petals .petal:nth-child(5) {
+  left: 47%;
+  --fall-duration: 11.8s;
+  animation-delay: -6s;
+}
+
+.spring-petals .petal:nth-child(6) {
+  left: 58%;
+  --fall-duration: 14.8s;
+  animation-delay: -9.2s;
+}
+
+.spring-petals .petal:nth-child(7) {
+  left: 69%;
+  --fall-duration: 13.6s;
+  animation-delay: -3.8s;
+}
+
+.spring-petals .petal:nth-child(8) {
+  left: 79%;
+  --fall-duration: 15.4s;
+  animation-delay: -12s;
+}
+
+.spring-petals .petal:nth-child(9) {
+  left: 88%;
+  --fall-duration: 12.9s;
+  animation-delay: -7.5s;
+}
+
+.spring-petals .petal:nth-child(10) {
+  left: 95%;
+  --fall-duration: 14.4s;
+  animation-delay: -1.2s;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -8%, 0) rotate(0deg) scale(0.86);
+  }
+
+  100% {
+    transform: translate3d(-1.2vw, 128vh, 0) rotate(320deg) scale(1.04);
+  }
+}
+
+@keyframes petal-sway {
+  0% {
+    margin-left: -0.6vw;
+  }
+
+  100% {
+    margin-left: 1.5vw;
+  }
+}
+
+@media (max-width: 960px) {
+  .spring-petals {
+    opacity: 0.45;
+  }
+}
