@@ -4,6 +4,7 @@ import { Navigate, NavLink, Route, Routes } from "react-router-dom";
 import Screen1 from "./components/Screen1.tsx";
 import Screen2 from "./components/Screen2.tsx";
 import Screen3 from "./components/Screen3.tsx";
+import MainScreen from "./components/MainScreen.tsx";
 import { getSeasonFromMonth } from "./data/seasons.ts";
 import "./App.css";
 import "./components/SpringAnimation.css";
@@ -93,16 +94,18 @@ function App() {
         onBlur={scheduleHideRouteNav}
         onTouchStart={showRouteNav}
       >
+        <NavLink to="/">Main</NavLink>
         <NavLink to="/screen-1">Screen 1</NavLink>
         <NavLink to="/screen-2">Screen 2</NavLink>
         <NavLink to="/screen-3">Screen 3</NavLink>
       </nav>
 
       <Routes>
-        <Route path="/" element={<Navigate to="/screen-1" replace />} />
+        <Route path="/" element={<MainScreen {...screenProps} />} />
         <Route path="/screen-1" element={<Screen1 {...screenProps} />} />
         <Route path="/screen-2" element={<Screen2 {...screenProps} />} />
         <Route path="/screen-3" element={<Screen3 {...screenProps} />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   );
