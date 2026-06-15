@@ -1,4 +1,4 @@
-.tv-board::after {
+/*.tv-board::after {
   content: none;
 }
 
@@ -76,4 +76,4 @@
     transform: translate3d(24%, -10%, 0) rotate(2deg);
     opacity: 0;
   }
-}
+}*/

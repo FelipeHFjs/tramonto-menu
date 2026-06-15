@@ -3,10 +3,10 @@ import { desserts } from "./desserts.ts";
 import { tea } from "./tea.ts";
 
 export const firstColumn: MenuSectionData[] = [
-  { title: "Desserts", items: desserts.slice(0, 7) },
+  { title: "Tea", items: tea },
+  { title: "Desserts", items: desserts.slice(0, 4) },
 ];
 
 export const secondColumn: MenuSectionData[] = [
-  { title: "Desserts", items: desserts.slice(7) },
-  { title: "Tea", items: tea },
+  { title: "Desserts", items: desserts.slice(4) },
 ];
