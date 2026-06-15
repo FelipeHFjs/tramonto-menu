@@ -1,6 +1,9 @@
 import MenuSection from "./MenuSection.tsx";
 import type { BoardScreenProps } from "./types.ts";
 import { firstColumn, secondColumn } from "../data/screen2.ts";
+import { QRCodeSVG } from "qrcode.react";
+
+const menuUrl = "https://tramonto-menu.vercel.app/";
 
 export default function Screen2({
   seasonClass,
@@ -31,16 +34,29 @@ export default function Screen2({
             <MenuSection key={section.title} {...section} />
           ))}
         </div>
-        <div className="menu-column">
+        <div className="menu-column menu-column-clock">
           {secondColumn.map((section) => (
             <MenuSection key={section.title} {...section} />
           ))}
           <aside
-            className="column-clock"
-            aria-label={`Current time ${timeLabel}`}
+            className="column-clock column-clock-with-qr"
+            aria-label={`Current time ${timeLabel} and QR for online menu`}
           >
-            <p>{dateLabel}</p>
-            <strong>{timeLabel}</strong>
+            <div className="clock-time-block">
+              <p>{dateLabel}</p>
+              <strong>{timeLabel}</strong>
+            </div>
+            <div className="clock-qr-block">
+              <QRCodeSVG
+                value={menuUrl}
+                size={150}
+                level="M"
+                includeMargin
+                className="clock-qr"
+                bgColor="transparent"
+                fgColor="currentColor"
+              />
+            </div>
           </aside>
         </div>
       </section>
