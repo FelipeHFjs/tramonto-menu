@@ -4,6 +4,7 @@ import { firstColumn, secondColumn } from "../data/screen2.ts";
 import { QRCodeSVG } from "qrcode.react";
 
 const menuUrl = "https://tramonto-menu.vercel.app/";
+const qrSize = 225;
 
 export default function Screen2({
   seasonClass,
@@ -49,12 +50,13 @@ export default function Screen2({
             <div className="clock-qr-block">
               <QRCodeSVG
                 value={menuUrl}
-                size={150}
+                size={qrSize}
                 level="M"
                 includeMargin
                 className="clock-qr"
                 bgColor="transparent"
                 fgColor="currentColor"
+                style={{ width: qrSize, height: qrSize }}
               />
             </div>
           </aside>

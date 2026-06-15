@@ -41,6 +41,10 @@ export default function MainScreen({
         </div>
       </header>
 
+      <aside className="main-menu-store-note" aria-label="Store location note">
+        Buscanos en la tienda Rapix Mart campo 101
+      </aside>
+
       <section className="all-menu-grid" aria-label="Full menu categories">
         {allSections.map((section) => (
           <Fragment key={section.title}>

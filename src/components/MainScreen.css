@@ -17,6 +17,21 @@
   font-size: clamp(30px, 3.4vw, 56px);
 }
 
+.main-menu-store-note {
+  border: 1px solid var(--surface-card-border);
+  border-radius: 14px;
+  padding: clamp(12px, 1.5vw, 16px) clamp(16px, 2vw, 22px);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  color: color-mix(in srgb, var(--primary-300) 92%, transparent);
+  font-size: clamp(14px, 1.05vw, 18px);
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
 .main-menu-meta {
   margin: 0;
   display: grid;
