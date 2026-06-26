@@ -21,10 +21,10 @@ export const desserts: MenuItem[] = [
   //   name: "Cinnamon Roll",
   //   small: "55",
   // },
-  // {
-  //   name: "Donut",
-  //   small: "24",
-  // },
+  {
+    name: "Donut",
+    small: "24",
+  },
   {
     name: "Cheesecake",
     small: "48",
@@ -42,11 +42,19 @@ export const desserts: MenuItem[] = [
     small: "32",
   },
   {
-    name: "Lemon Raspberry Muffin",
+    name: "Chocolate Chip Muffin",
     small: "32",
   },
+  // {
+  //   name: "Lemon Raspberry Muffin",
+  //   small: "32",
+  // },
   {
     name: "Apple Pie",
+    small: "48",
+  },
+  {
+    name: "Cherry Crumb Pie",
     small: "48",
   },
   {
