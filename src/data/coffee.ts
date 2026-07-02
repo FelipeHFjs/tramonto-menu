@@ -4,6 +4,7 @@ export type CoffeeFlavorNoteItem = {
   name: string;
   price?: string;
   description?: string;
+  accent?: boolean;
 };
 
 export type CoffeeFlavorNote =
@@ -67,6 +68,21 @@ export const coffee: MenuItem[] = [
 
 export const coffeeFlavorNote: CoffeeFlavorNote[] = [
   {
+    name: "Sabores",
+    items: [
+      {
+        name: "Vainilla • Vainilla Francesa • Caramelo • Brown Sugar • Avellana • Banana Bread • Crema Irlandesa",
+        price: "+0",
+        accent: true,
+      },
+      {
+        name: "Chocolate • White Chocolate",
+        price: "+5",
+        accent: true,
+      },
+    ],
+  },
+  {
     name: "Extras",
     items: [
       {
@@ -91,19 +107,7 @@ export const coffeeFlavorNote: CoffeeFlavorNote[] = [
       },
       {
         name: "Extra Syrup",
-        price: "+5",
-      },
-    ],
-  },
-  {
-    name: "Sabores",
-    items: [
-      {
-        name: "Vainilla • Vainilla Francesa • Caramelo • Brown Sugar • Avellana • Banana Bread • Crema Irlandesa",
-      },
-      {
-        name: "Chocolate • White Chocolate",
-        price: "+5",
+        price: "+0",
       },
     ],
   },

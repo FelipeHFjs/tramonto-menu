@@ -56,8 +56,8 @@ export default function MainScreen({
                     <div className="all-menu-item-row">
                       <h3>{item.name}</h3>
                       <div className="all-menu-prices">
-                        <span>${item.small}</span>
-                        {item.large && <span>${item.large}</span>}
+                        <span>{item.small}</span>
+                        {item.large && <span>{item.large}</span>}
                       </div>
                     </div>
                     {item.details && <p>{item.details}</p>}
@@ -78,7 +78,14 @@ export default function MainScreen({
                     {"items" in note ? (
                       <ul>
                         {note.items.map((item) => (
-                          <li key={item.name}>
+                          <li
+                            key={item.name}
+                            className={
+                              item.accent
+                                ? "all-menu-note-item-accent"
+                                : undefined
+                            }
+                          >
                             <div className="all-menu-note-row">
                               <span>{item.name}</span>
                               {item.price && <strong>{item.price}</strong>}

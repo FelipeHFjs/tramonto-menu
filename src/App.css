@@ -361,6 +361,15 @@ h1 {
   color: var(--primary-500);
 }
 
+.note-item-accent .note-item-line span {
+  color: var(--primary-100);
+  font-weight: 600;
+}
+
+.note-item-accent .note-item-line strong {
+  color: color-mix(in srgb, var(--primary-500) 85%, var(--primary-200));
+}
+
 .note-item-description {
   margin: 0;
   font-size: clamp(18px, 1.3vw, 26px);

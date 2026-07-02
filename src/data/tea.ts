@@ -8,7 +8,7 @@ export const tea: MenuItem[] = [
   },
   {
     name: "Chai",
-    details: "Vainilla - Especias",
+    details: "Vainilla • Especias",
     small: "70",
     large: "77",
   },

@@ -17,10 +17,6 @@ export const desserts: MenuItem[] = [
     name: "Chocolate Chip Cookie",
     small: "30",
   },
-  // {
-  //   name: "Cinnamon Roll",
-  //   small: "55",
-  // },
   {
     name: "Donut",
     small: "24",
@@ -35,15 +31,12 @@ export const desserts: MenuItem[] = [
   },
   {
     name: "Blueberry Croissant",
-    small: "80",
+    small: "65",
   },
   {
     name: "Chocolate Muffin",
     small: "32",
-  },
-  {
-    name: "Chocolate Chip Muffin",
-    small: "32",
+    details: "Chocolate • Chocolate Chips",
   },
   // {
   //   name: "Lemon Raspberry Muffin",
@@ -54,8 +47,9 @@ export const desserts: MenuItem[] = [
     small: "48",
   },
   {
-    name: "Cherry Crumb Pie",
-    small: "48",
+    name: "Crumb Pie",
+    small: "36",
+    details: "Cherry • Blueberry",
   },
   {
     name: "Kringel (Trenzas)",

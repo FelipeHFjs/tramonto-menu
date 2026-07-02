@@ -9,7 +9,7 @@
 .main-menu-header {
   justify-content: space-between;
   align-items: flex-end;
-  gap: 16px;
+  gap: 8px;
 }
 
 .main-menu-header h1 {
@@ -116,7 +116,7 @@
 
 .all-menu-prices {
   display: inline-flex;
-  gap: 8px;
+  gap: 12px;
   align-items: baseline;
 }
 
@@ -162,6 +162,15 @@
 .all-menu-note-row strong {
   font-size: clamp(13px, 1.02vw, 16px);
   color: var(--primary-500);
+}
+
+.all-menu-note-item-accent .all-menu-note-row span {
+  color: var(--primary-100);
+  font-weight: 600;
+}
+
+.all-menu-note-item-accent .all-menu-note-row strong {
+  color: color-mix(in srgb, var(--primary-500) 85%, var(--primary-200));
 }
 
 @media (max-width: 760px) {

@@ -45,7 +45,10 @@ export default function Screen1({
                 {"items" in note ? (
                   <ul className="note-items">
                     {note.items.map((item) => (
-                      <li key={item.name} className="note-item">
+                      <li
+                        key={item.name}
+                        className={`note-item${item.accent ? " note-item-accent" : ""}`}
+                      >
                         <div className="note-item-line">
                           <span>{item.name}</span>
                           {item.price && <strong>{item.price}</strong>}
