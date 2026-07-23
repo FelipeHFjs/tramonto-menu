@@ -71,7 +71,6 @@ export default function MainScreen({
                 className="all-menu-section all-menu-notes"
                 aria-label="Coffee extras and flavors"
               >
-                <h2>Coffee Notes</h2>
                 {coffeeFlavorNote.map((note) => (
                   <section key={note.name} className="all-menu-note-block">
                     <h3>{note.name}</h3>
