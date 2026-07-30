@@ -42,8 +42,4 @@ export const desserts: MenuItem[] = [
     name: "Chocolate Cake",
     small: "58",
   },
-  {
-    name: "Blueberry Croissant",
-    small: "65",
-  },
 ];
